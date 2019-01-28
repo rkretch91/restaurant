@@ -1,0 +1,27 @@
+html
+  head
+    title Express controller architecture
+    link(rel='stylesheet', href='bootstrap/dist/css/bootstrap.min.css')
+  body
+    .py-5
+      .container.py-5
+        .row
+          .col-md-6.offset-md-3
+
+            form.form-signin(method='POST', action='/restaurants/save')
+              h3 Restaurants
+              p Create a new Restaurant and let the data be handled by a controller file. Check the console to see the payload.
+
+              .mb-3
+                label.sr-only(for='inputName') Title
+                input#inputTitle.form-control(name='name', type='text', placeholder='Restaurant Name', required='', autofocus='')
+
+              .mb-3
+                label.sr-only(for='inputContent') Content
+                textarea#inputContent.form-control(name='description', type='password', placeholder='Description', required='')
+              .mb-3
+                label.sr-only(for='inputContent') Order
+                input#inputOrder.form-control(name='order', type='rating', placeholder='Rating', required='', autofocus='')
+
+
+              button.btn.btn-lg.btn-primary.btn-block(type='submit') Create
