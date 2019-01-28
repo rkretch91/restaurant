@@ -7,7 +7,7 @@ const app = express()
 const mongoose = require('mongoose')
 
 mongoose
-  .connect(`mongodb://localhost:27017/restaurant`, { useNewUrlParser: true })
+  .connect(`mongodb://heroku_47btg4fx:81ian567b5p4l8hiqkrqiaph7m@ds213705.mlab.com:13705/heroku_47btg4fx`, { useNewUrlParser: true })
   .then(console.log('Successful'))
   .catch(error => {
     console.error(`Fuck! ${error.message}`)
